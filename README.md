@@ -86,7 +86,7 @@ Some dataset items contain `question_context`, which is some passage from the ch
 2. Document Processing: Converting notebooks to searchable chunks.
 3. Full Text Search: Basic search implementation.
 4. Single Vector Search: Dense retrieval methods.
-5. PLAID ColBERTv2 and answerai-colbert-small-v1 Search: Late interaction retrieval approaches.
+5. ColBERT Search: Late interaction retrieval approaches (ColBERTv2 and answerai-colbert-small-v1).
 
 ## Calculating Metrics
 
