@@ -1364,7 +1364,9 @@
                     "scoring_type": "simple",
                     "context": [
                         "The independent variable is often referred to as `x` and the dependent variable is often referred to as `y`"
-                    ]
+                    ],
+                    "explicit_context": "true",
+                    "extraneous_answer": "false"
                 }
             ],
             "question_context": []
@@ -1858,6 +1860,7 @@
                     "answer_component": "(i.e. the models should perform similarly to the humans, unless it is already anticipated to be better)", 
                     "scoring_type": "simple",
                     "context": [],
+                    "explicit_context": "false",
                     "extraneous_answer": "true"
                 }
             ],
