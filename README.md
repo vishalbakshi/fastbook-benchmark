@@ -92,9 +92,9 @@ Some dataset items contain `question_context`, which is some passage from the ch
 
 Since each question/answer pair has one or more `answer_component`s, I have chosen to modify the MRR@k and Recall@k calculations in my experiments and call them _Answer Component MRR@k_ and _Answer Component Recall@k_.
 
-#### Answer Component MRR@k
+#### Modified MRR@k
 
-The rank of the n-th passage, in the top-k passages, by which one or more `context`s of all `answer_component`s are retrieved. For example, if k=10 and a question has 4 `answer_component`s, and the corresponding `context`s are retrieved by the 9th-retrieved passage, the Answer Component MRR@10 is 1/9. If k=10 and only 3 of the `answer_component`s' `context`s are retrieved, Answer Component MRR@10 is 0.
+The rank of the n-th passage, in the top-k passages, by which one or more `context`s of all `answer_component`s are retrieved. For example, if k=10 and a question has 4 `answer_component`s, and the corresponding `context`s are retrieved by the 9th-retrieved passage, the Modified MRR@10 is 1/9. If k=10 and only 3 of the `answer_component`s' `context`s are retrieved, Modified MRR@10 is 0.
 
 ```python
 from ftfy import fix_text
@@ -119,9 +119,9 @@ def calculate_mrr(question, retrieved_passages, cutoff=10):
     return 1.0/highest_rank if highest_rank > 0 else 0.0
 ```
 
-#### Answer Component Recall@10
+#### Modified Recall@k
 
-The percentage of `answer_component`s for which one or more `context`s are retrieved in the top-k passages. For example, if k=10 and a question has 4 `answer_component`s, and the corresponding `context`s for only 3 of them are retrieved in the top-10 passages, the Answer Component Recall@10 is 0.75. In this way, Answer Component Recall@k is more lenient than Answer Component MRR@k.
+The percentage of `answer_component`s for which one or more `context`s are retrieved in the top-k passages. For example, if k=10 and a question has 4 `answer_component`s, and the corresponding `context`s for only 3 of them are retrieved in the top-10 passages, the Modified Recall@10 is 0.75. In this way, Modified Recall@k is more lenient than Modified MRR@k.
 
 ```python
 from ftfy import fix_text
@@ -144,9 +144,9 @@ def calculate_recall(question, retrieved_passages, cutoff=10):
     return sum(ans_comp_found) / len(ans_comp_found)
 ```
 
-## Dataset Metrics
+## Dataset Statistics
 
-The following metrics are calculated in [this Colab notebook](https://colab.research.google.com/drive/1KCgmVljX4aURRyFGmnnK3U2cv_3BSqs7?usp=sharing). I'll do my best to update this section after dataset updates.
+The following key statistics are calculated in [this Colab notebook](https://colab.research.google.com/drive/1KCgmVljX4aURRyFGmnnK3U2cv_3BSqs7?usp=sharing). I'll do my best to update this section after dataset updates.
 
 ### Number of Questions per Chapter
 
