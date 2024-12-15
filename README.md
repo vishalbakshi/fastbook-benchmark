@@ -32,6 +32,8 @@ This dataset currently contains 191 questions (from [fastbook](https://github.co
 
 ## Dataset Metrics
 
+The following metrics are calculated in [this Colab notebook](https://colab.research.google.com/drive/1KCgmVljX4aURRyFGmnnK3U2cv_3BSqs7?usp=sharing). I'll do my best to update this section after dataset updates.
+
 ### Number of Questions per Chapter
 
 |Chapter|# of Questions|
