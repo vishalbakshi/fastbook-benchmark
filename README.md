@@ -60,6 +60,19 @@ The following metrics are calculated in [this Colab notebook](https://colab.rese
 |13|42|
 |**Total**|**357**|
 
+### Average Number of `answer_component`s per Question
+
+|Chapter|Avg # of `answer_components` per Question|
+|:-:|:-:|
+|1|2.6
+|2|2.2
+|4|2.4
+|8|1.3
+|9|1.8
+|10|1.4
+|13|1.2
+|**Overall**|**1.9**
+
 ### Number of Empty `answer_component.context`s per Chapter
 
 |Chapter|# of Empty `answer_component.context`s|
