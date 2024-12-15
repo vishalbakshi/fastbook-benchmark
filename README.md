@@ -80,6 +80,14 @@ Some `answer_component`s are flagged with `"explicit_context" = "false"` if the 
 
 Some dataset items contain `question_context`, which is some passage from the chapter which addresses the `question_text`. (Ex: Ch4, Q27). 
 
+## Video Series (coming soon)
+
+1. fastbook-benchmark Dataset Overview: Introduction to dataset structure and metrics.
+2. Document Processing: Converting notebooks to searchable chunks.
+3. Full Text Search: Basic search implementation.
+4. Single Vector Search: Dense retrieval methods.
+5. PLAID ColBERTv2 and answerai-colbert-small-v1 Search: Late interaction retrieval approaches.
+
 ### Calculating Metrics
 
 Since each question/answer pair has one or more `answer_component`s, I have chosen to modify the MRR@k and Recall@k calculations in my experiments and call them _Answer Component MRR@k_ and _Answer Component Recall@k_.
