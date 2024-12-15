@@ -3,7 +3,7 @@ Information Retrieval QA Dataset
 
 ## Background
 
-I created this dataset to evaluate different retrieval methods. I use the following code to load this dataset:
+I created this dataset to evaluate different retrieval methods. I use the following code to load the `main` version of this dataset:
 
 ```python
 def download_file(url, fn): 
