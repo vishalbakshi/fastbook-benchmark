@@ -66,9 +66,28 @@ This dataset currently contains 191 questions (from [fastbook](https://github.co
 |10|1|
 |13|1|
 
-## Number of `answer_component.explicit_context = "true"` per Chapter 
+## Number of `answer_component.explicit_context = "false"` per Chapter 
 
+|Chapter|# of Implicit `answer_component`s|
+|:-:|:-:|
+|1|8
+|2|5
+|4|10
+|8|3
+|9|4
+|10|4
+|13|7
 
 
 ## Number of `answer_component.extraneous_answer` = "true"` per Chapter
+
+|Chapter|# of Extraneous `answer_component`s|
+|:-:|:-:|	
+|1|7
+|2|2
+|4|8
+|8|1
+|9|0
+|10|0
+|13|1
 
