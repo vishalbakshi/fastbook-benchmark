@@ -80,6 +80,62 @@ Some `answer_component`s are flagged with `"explicit_context" = "false"` if the 
 
 Some dataset items contain `question_context`, which is some passage from the chapter which addresses the `question_text`. (Ex: Ch4, Q27). 
 
+### Calculating Metrics
+
+Since each question/answer pair has one or more `answer_component`s, I have chosen to modify the MRR@k and Recall@k calculations in my experiments and call them _Answer Component MRR@k_ and _Answer Component Recall@k_.
+
+#### Answer Component MRR@k
+
+The rank of the n-th passage, in the top-k passages, by which one or `context`s of all `answer_component`s are retreived.
+
+```python
+import ftfy
+
+def calculate_mrr(question, retrieved_passages, cutoff=10):
+    retrieved_passages = retrieved_passages[:cutoff]
+    highest_rank = 0
+
+    for ans_comp in question["answer_context"]:
+        contexts = ans_comp.get("context", [])
+        component_found = False
+
+        for rank, passage in enumerate(retrieved_passages, start=1):
+            if any(fix_text(context) in fix_text(passage) for context in contexts):
+                highest_rank = max(highest_rank, rank)
+                component_found = True
+                break
+
+        if not component_found:
+            return 0.0
+
+    return 1.0/highest_rank if highest_rank > 0 else 0.0
+```
+
+#### Answer Component Recall@10
+
+The percentage of `answer_component`s for which one or more `context`s are retrieved in the top-k passages.
+
+```python
+import ftfy
+
+def calculate_recall(question, retrieved_passages, cutoff=10):
+    retrieved_passages = retrieved_passages[:cutoff]
+    ans_comp_found = []
+
+    for ans_comp in question["answer_context"]:
+        contexts = ans_comp.get("context", [])
+        found = False
+
+        for passage in retrieved_passages:
+            if any(fix_text(context) in fix_text(passage) for context in contexts):
+                found = True
+                break
+
+        ans_comp_found.append(found)
+
+    return sum(ans_comp_found) / len(ans_comp_found)
+```
+
 ## Dataset Metrics
 
 The following metrics are calculated in [this Colab notebook](https://colab.research.google.com/drive/1KCgmVljX4aURRyFGmnnK3U2cv_3BSqs7?usp=sharing). I'll do my best to update this section after dataset updates.
