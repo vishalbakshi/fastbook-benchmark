@@ -80,7 +80,7 @@ Some `answer_component`s are flagged with `"explicit_context" = "false"` if the 
 
 Some dataset items contain `question_context`, which is some passage from the chapter which addresses the `question_text`. (Ex: Ch4, Q27). 
 
-## Video Series (coming soon)
+### Video Series (coming soon)
 
 1. fastbook-benchmark Dataset Overview: Introduction to dataset structure and metrics.
 2. Document Processing: Converting notebooks to searchable chunks.
