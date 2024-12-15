@@ -86,10 +86,10 @@ Since each question/answer pair has one or more `answer_component`s, I have chos
 
 #### Answer Component MRR@k
 
-The rank of the n-th passage, in the top-k passages, by which one or more `context`s of all `answer_component`s are retreived. For example, if k=10 and a question has 4 `answer_component`s, and the corresponding `context`s are retrieved by the 9th-retrieved passage, the Answer Component MRR@10 is 1/9. If k=10 and only 3 of the `answer_component`s' `context`s are retrieved, Answer Component MRR@10 is 0.
+The rank of the n-th passage, in the top-k passages, by which one or more `context`s of all `answer_component`s are retrieved. For example, if k=10 and a question has 4 `answer_component`s, and the corresponding `context`s are retrieved by the 9th-retrieved passage, the Answer Component MRR@10 is 1/9. If k=10 and only 3 of the `answer_component`s' `context`s are retrieved, Answer Component MRR@10 is 0.
 
 ```python
-import ftfy
+from ftfy import fix_text
 
 def calculate_mrr(question, retrieved_passages, cutoff=10):
     retrieved_passages = retrieved_passages[:cutoff]
@@ -116,7 +116,7 @@ def calculate_mrr(question, retrieved_passages, cutoff=10):
 The percentage of `answer_component`s for which one or more `context`s are retrieved in the top-k passages. For example, if k=10 and a question has 4 `answer_component`s, and the corresponding `context`s for only 3 of them are retrieved in the top-10 passages, the Answer Component Recall@10 is 0.75. In this way, Answer Component Recall@k is more lenient than Answer Component MRR@k.
 
 ```python
-import ftfy
+from ftfy import fix_text
 
 def calculate_recall(question, retrieved_passages, cutoff=10):
     retrieved_passages = retrieved_passages[:cutoff]
