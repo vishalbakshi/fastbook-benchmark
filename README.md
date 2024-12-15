@@ -80,13 +80,13 @@ Some `answer_component`s are flagged with `"explicit_context" = "false"` if the 
 
 Some dataset items contain `question_context`, which is some passage from the chapter which addresses the `question_text`. (Ex: Ch4, Q27). 
 
-## Video Series (coming soon)
+## Video Series
 
-1. fastbook-benchmark Dataset Overview: Introduction to dataset structure and metrics.
-2. Document Processing: Converting notebooks to searchable chunks.
-3. Full Text Search: Basic search implementation.
-4. Single Vector Search: Dense retrieval methods.
-5. ColBERT Search: Late interaction retrieval approaches (ColBERTv2 and answerai-colbert-small-v1).
+1. [Introducing the fastbook-benchmark Information Retrieval QA Dataset): Dataset and modified metrics overview.
+2. Document Processing (coming soon): Converting notebooks to searchable chunks.
+3. Full Text Search (coming soon): Basic search implementation.
+4. Single Vector Search (coming soon): Dense retrieval methods.
+5. ColBERT Search (coming soon): Late interaction retrieval approaches (ColBERTv2 and answerai-colbert-small-v1).
 
 ## Calculating Metrics
 
