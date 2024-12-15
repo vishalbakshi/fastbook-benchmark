@@ -82,7 +82,7 @@ Some dataset items contain `question_context`, which is some passage from the ch
 
 ## Video Series
 
-1. [Introducing the fastbook-benchmark Information Retrieval QA Dataset): Dataset and modified metrics overview.
+1. [Introducing the fastbook-benchmark Information Retrieval QA Dataset](https://www.youtube.com/watch?v=VsVIy8k9rMU): Dataset and modified metrics overview.
 2. Document Processing (coming soon): Converting notebooks to searchable chunks.
 3. Full Text Search (coming soon): Basic search implementation.
 4. Single Vector Search (coming soon): Dense retrieval methods.
