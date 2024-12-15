@@ -30,7 +30,9 @@ This dataset currently contains 191 questions (from [fastbook](https://github.co
 - [Chapter 10 Solutions](https://forums.fast.ai/t/fastbook-chapter-10-questionnaire-solutions-wiki/70506)
 - [Chapter 13 Solutions](https://forums.fast.ai/t/fastbook-chapter-13-questionnaire-wiki/91761)
 
-## Number of Questions per Chapter
+## Dataset Metrics
+
+### Number of Questions per Chapter
 
 |Chapter|# of Questions|
 |:-:|:-:|
@@ -43,7 +45,7 @@ This dataset currently contains 191 questions (from [fastbook](https://github.co
 |13|34|
 |**Total**|**191**|
 
-## Number of `answer_component`s per Chapter
+### Number of `answer_component`s per Chapter
 
 |Chapter|# of `answer_components`|
 |:-:|:-:|
@@ -56,7 +58,7 @@ This dataset currently contains 191 questions (from [fastbook](https://github.co
 |13|42|
 |**Total**|**357**|
 
-## Number of Empty `answer_component.context`s per Chapter
+### Number of Empty `answer_component.context`s per Chapter
 
 |Chapter|# of Empty `answer_component.context`s|
 |:-:|:-:|
@@ -69,7 +71,7 @@ This dataset currently contains 191 questions (from [fastbook](https://github.co
 |13|1|
 |**Total**|**25**|
 
-## Number of `answer_component.explicit_context = "false"` per Chapter 
+### Number of `answer_component.explicit_context = "false"` per Chapter 
 
 |Chapter|# of Implicit `answer_component`s|
 |:-:|:-:|
@@ -83,7 +85,7 @@ This dataset currently contains 191 questions (from [fastbook](https://github.co
 |**Total**|**41**|
 
 
-## Number of `answer_component.extraneous_answer = "true"` per Chapter
+### Number of `answer_component.extraneous_answer = "true"` per Chapter
 
 |Chapter|# of Extraneous `answer_component`s|
 |:-:|:-:|	
