@@ -68,7 +68,17 @@ Each dataset item has the following structure:
 }
 ```
 
-Each dataset item represents one question/answer pair. `answer_context` contains the passages from the chapter relevant to the `gold_standard_answer`. Each `context` contains one or more passages relevant to the corresponding `answer_component`. I tagged some `answer_component`s as an `extraneous_answer` since I felt they were extraneous to the goal of the question. Some `answer_component`s are flagged with `"explicit_context" = "false"` if the `context`s do not explicitly address the corresponding `answer_component`. Some dataset items contain `question_context`, which is some passage from the chapter which addresses the `question_text`.
+Each dataset item represents one question/answer pair. 
+
+`answer_context` contains the passages from the chapter relevant to the `gold_standard_answer`. 
+
+Each `context` contains one or more passages relevant to the corresponding `answer_component`. (Ex: Ch4 Q30 has multiple strings in `context; Q20 has many `answer_component`s). 
+
+I tagged some `answer_component`s as an `extraneous_answer` since I felt they were extraneous to the goal of the question. (Ex: Ch13, Q38). 
+
+Some `answer_component`s are flagged with `"explicit_context" = "false"` if the `context`s do not explicitly address the corresponding `answer_component` (Ex: Ch4, Q11) or if `context` is empty (Ex: Ch4, Q2). 
+
+Some dataset items contain `question_context`, which is some passage from the chapter which addresses the `question_text`. (Ex: Ch4, Q27). 
 
 ## Dataset Metrics
 
