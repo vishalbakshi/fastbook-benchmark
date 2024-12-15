@@ -30,6 +30,46 @@ This dataset currently contains 191 questions (from [fastbook](https://github.co
 - [Chapter 10 Solutions](https://forums.fast.ai/t/fastbook-chapter-10-questionnaire-solutions-wiki/70506)
 - [Chapter 13 Solutions](https://forums.fast.ai/t/fastbook-chapter-13-questionnaire-wiki/91761)
 
+### Dataset Structure
+
+Each dataset item has the following structure:
+
+```json
+{
+    "chapter": 0,
+    "question_number": 0,
+    "question_text": "...",
+    "gold_standard_answer": "...",
+    "answer_context": [
+        {
+            "answer_component": "...", 
+            "scoring_type": "simple",
+            "context": [
+                "...",
+                "...",
+                "..."
+            ],
+            "explicit_context": "true",
+            "extraneous_answer": "false"
+        },
+        {
+            "answer_component": "...", 
+            "scoring_type": "simple",
+            "context": [
+                "...",
+                "...",
+                "..."
+            ],
+            "explicit_context": "false",
+            "extraneous_answer": "true"
+        }
+    ],
+        "question_context": []
+}
+```
+
+Each dataset item represents one question/answer pair. `answer_context` contains the passages from the chapter relevant to the `gold_standard_answer`. Each `context` contains one or more passages relevant to the corresponding `answer_component`. I tagged some `answer_components as an `extraneous_answer` since I felt they were extraneous to the goal of the question. Some `answer_component`s are flagged with `"explicit_context" = "false"` if the `context`s do not explicitly address the corresponding `answer_component`. Some dataset items contain `question_context`, which is some passage from the chapter which addresses the `question_text`.
+
 ## Dataset Metrics
 
 The following metrics are calculated in [this Colab notebook](https://colab.research.google.com/drive/1KCgmVljX4aURRyFGmnnK3U2cv_3BSqs7?usp=sharing). I'll do my best to update this section after dataset updates.
