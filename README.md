@@ -72,7 +72,7 @@ Each dataset item represents one question/answer pair.
 
 `answer_context` contains the passages from the chapter relevant to the `gold_standard_answer`. 
 
-Each `context` contains one or more passages relevant to the corresponding `answer_component`. (Ex: Ch4 Q30 has multiple strings in `context; Q20 has many `answer_component`s). 
+Each `context` contains one or more passages relevant to the corresponding `answer_component`. (Ex: Ch4 Q30 has multiple strings in `context`; Q20 has many `answer_component`s). 
 
 I tagged some `answer_component`s as an `extraneous_answer` since I felt they were extraneous to the goal of the question. (Ex: Ch13, Q38). 
 
