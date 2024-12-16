@@ -19,7 +19,8 @@ nbs = {
 }
 
 def download_data():
-    for chapter, nb in nbs.items(): download_file(urls[chapter], fn=nb)
+    for chapter, nb in nbs.items(): 
+        download_file(urls[chapter], fn=nb)
     return nbs
 
 def chunk_string(text, n):
