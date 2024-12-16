@@ -19,7 +19,7 @@ nbs = {
 }
 
 def download_data():
-  for chapter, nb in nbs.items(): download_file(urls[chapter], fn=nb)
+    for chapter, nb in nbs.items(): download_file(urls[chapter], fn=nb)
     return nbs
 
 def chunk_string(text, n):
@@ -27,26 +27,25 @@ def chunk_string(text, n):
     return [text[i:i + skip] for i in range(0, len(text), skip)]
 
 def notebook_to_string(path):
-  with open(path, 'r', encoding='utf-8') as f: notebook = json.load(f)
+    with open(path, 'r', encoding='utf-8') as f: notebook = json.load(f)
+        all_text = ''
+    
+    for cell in notebook['cells']:
+        if cell['cell_type'] == 'markdown' and any('## Questionnaire' in line for line in cell['source']): break
+        if cell['cell_type'] in ['markdown', 'code']: all_text += ''.join(cell['source']) + '\n'
 
-  all_text = ''
-
-  for cell in notebook['cells']:
-    if cell['cell_type'] == 'markdown' and any('## Questionnaire' in line for line in cell['source']): break
-    if cell['cell_type'] in ['markdown', 'code']: all_text += ''.join(cell['source']) + '\n'
-
-  return all_text
+    return all_text
 
 def get_data(nbs):
-  data = {}
-  n_chars = 0
+    data = {}
+    n_chars = 0
   
-  for chapter, nb in nbs.items():
-      data[chapter] = chunk_string(notebook_to_string(nb), 2)
-      for c in data[chapter]: n_chars += len(c)
+    for chapter, nb in nbs.items():
+        data[chapter] = chunk_string(notebook_to_string(nb), 2)
+        for c in data[chapter]: n_chars += len(c)
   
-  assert n_chars == 503769
-  return data
+    assert n_chars == 503769
+    return data
 
 def process_documents(text, chunk_size):
     documents = corpus_processor.process_corpus(text, chunk_size=chunk_size)
