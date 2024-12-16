@@ -2,6 +2,6 @@ Examples of using the fastbook-benchmark:
 
 - Document processing
 - Full text search
-- Scoring results with modified metrics
+- Scoring retrieval results
 - Single vector search
 - ColBERT search
