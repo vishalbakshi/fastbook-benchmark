@@ -85,7 +85,7 @@ Some dataset items contain `question_context`, which is some passage from the ch
 1. [Introducing the fastbook-benchmark Information Retrieval QA Dataset](https://www.youtube.com/watch?v=VsVIy8k9rMU): Dataset and modified metrics overview.
 2. [Document Processing](https://youtu.be/snZ0d5ctMWk): Converting notebooks to searchable chunks.
 3. [Full Text Search](https://youtu.be/YGHzuGUivao): Basic search implementation.
-4. Scoring Retrieval Results (coming soon): Implementing modified MRR@10 and Recall@10.
+4. [Scoring Retrieval Results](https://youtu.be/Ffg7msEKKH8): Implementing modified MRR@k and modified Recall@k.
 5. Single Vector Search (coming soon): Dense retrieval methods.
 6. ColBERT Search (coming soon): Late interaction retrieval approaches (ColBERTv2 and answerai-colbert-small-v1).
 
