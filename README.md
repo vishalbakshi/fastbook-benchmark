@@ -86,7 +86,7 @@ Some dataset items contain `question_context`, which is some passage from the ch
 2. [Document Processing](https://youtu.be/snZ0d5ctMWk): Converting notebooks to searchable chunks.
 3. [Full Text Search](https://youtu.be/YGHzuGUivao): Basic search implementation.
 4. [Scoring Retrieval Results](https://youtu.be/Ffg7msEKKH8): Implementing modified MRR@k and modified Recall@k.
-5. Single Vector Search (coming soon): Top-k passages by cosine similarity.
+5. [Single Vector Search](https://youtu.be/S9xcTJ_aTvY): Top-k passages by cosine similarity.
 6. ColBERT Search (coming soon): Late interaction retrieval approaches (ColBERTv2 and answerai-colbert-small-v1).
 
 ## Calculating Metrics
