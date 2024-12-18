@@ -1,6 +1,19 @@
 # fastbook-benchmark
 Information Retrieval QA Dataset
 
+The fastbook-benchmark dataset is a specialized evaluation dataset for information retrieval in educational contexts.
+
+Structure:
+- Many-to-many mappings between questions and relevant passages
+- Questions from end-of-chapter questionnaires
+- Gold standard answers broken into components, with each component mapped to one or more relevant passages
+
+Complexity:
+- Natural language complexity from real textbook Q&A
+- Custom evaluation metrics (MRR@10, Recall@10) adapted for multi-component answers
+
+The dataset's value comes from its structured approach to handling complex educational content where single answers often require synthesizing information from multiple passages.
+
 ## Background
 
 I created this dataset to evaluate different retrieval methods. I use the following code to load the `main` version of this dataset:
