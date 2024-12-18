@@ -16,23 +16,6 @@ The dataset's value comes from its structured approach to handling complex educa
 
 ## Background
 
-I created this dataset to evaluate different retrieval methods. I use the following code to load the `main` version of this dataset:
-
-```python
-def download_file(url, fn): 
-    with open(fn, 'wb') as file: file.write(requests.get(url).content)
-
-url = 'https://raw.githubusercontent.com/vishalbakshi/fastbook-benchmark/refs/heads/main/fastbook-benchmark.json'
-download_file(url=url, fn="fastbook-benchmark.json")
-
-def load_benchmark():
-    with open('fastbook-benchmark.json', 'r') as f: benchmark = json.load(f)
-    return benchmark
-
-benchmark = load_benchmark()
-assert len(benchmark['questions']) == 191
-```
-
 This dataset currently contains 191 questions (from [fastbook](https://github.com/fastai/fastbook/tree/master) end-of-chapter Questionnaires) for 7 chapters (1, 2, 4, 8, 9, 10, and 13). The `gold_standard_answer` for each question is verbatim from the chapter's corresponding solutions Wiki on the fastai Forums:
 
 - [Chapter 1 Solutions](https://forums.fast.ai/t/fastbook-chapter-1-questionnaire-solutions-wiki/65647)
@@ -92,6 +75,25 @@ I tagged some `answer_component`s as an `extraneous_answer` since I felt they we
 Some `answer_component`s are flagged with `"explicit_context" = "false"` if the `context`s do not explicitly address the corresponding `answer_component` (Ex: Ch4, Q11) or if `context` is empty (Ex: Ch4, Q2). 
 
 Some dataset items contain `question_context`, which is some passage from the chapter which addresses the `question_text`. (Ex: Ch4, Q27). 
+
+### Usage
+
+I use the following code to load the current `main` branch version of this dataset:
+
+```python
+def download_file(url, fn): 
+    with open(fn, 'wb') as file: file.write(requests.get(url).content)
+
+url = 'https://raw.githubusercontent.com/vishalbakshi/fastbook-benchmark/refs/heads/main/fastbook-benchmark.json'
+download_file(url=url, fn="fastbook-benchmark.json")
+
+def load_benchmark():
+    with open('fastbook-benchmark.json', 'r') as f: benchmark = json.load(f)
+    return benchmark
+
+benchmark = load_benchmark()
+assert len(benchmark['questions']) == 191
+```
 
 ## Video Series
 
