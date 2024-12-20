@@ -106,7 +106,7 @@ assert len(benchmark['questions']) == 191
 
 ## Calculating Metrics
 
-Since each question/answer pair has one or more `answer_component`s, I have chosen to modify the MRR@k and Recall@k calculations in my experiments and call them _Answer Component MRR@k_ and _Answer Component Recall@k_.
+Since each question/answer pair has one or more `answer_component`s, I have chosen to modify the MRR@k and Recall@k calculations in my experiments and call them _Modified MRR@k_ and _Modified Recall@k_.
 
 #### Modified MRR@k
 
