@@ -16,6 +16,8 @@ The dataset's value comes from its structured approach to handling complex educa
 
 ## Background
 
+You can see more information on the development and usage of this dataset in my [fastbookRAG blog post series](https://vishalbakshi.github.io/blog/index.html#category=fastbookRAG).
+
 This dataset currently contains 191 questions (from [fastbook](https://github.com/fastai/fastbook/tree/master) end-of-chapter Questionnaires) for 7 chapters (1, 2, 4, 8, 9, 10, and 13). The `gold_standard_answer` for each question is verbatim from the chapter's corresponding solutions Wiki on the fastai Forums:
 
 - [Chapter 1 Solutions](https://forums.fast.ai/t/fastbook-chapter-1-questionnaire-solutions-wiki/65647)
